@@ -9,7 +9,7 @@ void rev_string(char *s)
 	int l, i;
 	char ch;
 
-	/*find string lengthwithout null char*/
+	/*find string length without null char*/
 	for (l = 0; s[1] != '\0'; ++l)
 		;
 
@@ -20,4 +20,5 @@ void rev_string(char *s)
 		s[i] = s[l - 1 - i]; /*-1 because the array starts from 0*/
 		s[l - 1 - i] = ch;
 	}
+
 }
