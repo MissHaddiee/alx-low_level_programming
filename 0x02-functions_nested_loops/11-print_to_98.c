@@ -1,30 +1,31 @@
 #include <stdio.h>
-
+#include "main.h"
 /**
-* main - computes and prints the sum of all the multiples
-* of 3 or 5 below 1024
-* Return: Always 0 (Success)
-*/
-int main(void)
+ * print_to_98 - prints all numbers from n to 98,
+ * followed by a new line
+ * @n: print from this number
+ */
+void print_to_98(int n)
 {
-	unsigned long int sum3, sum5, sum;
-	int i;
+	int i, j;
 
-	sum3 = 0;
-	sum5 = 0;
-	sum = 0;
-
-	for (i = 0; i < 1024; ++i)
+	if (n <= 98)
 	{
-		if ((i % 3) == 0)
+		for (i = n; i <= 98; i++)
 		{
-			sum3 = sum3 + i;
-		} else if ((i % 5) == 0)
+			if (i != 98)
+				printf("%d, ", i);
+			else if (i == 98)
+				printf("%d\n", i);
+		}
+	} else if (n >= 98)
+	{
+		for (j = n; j >= 98; j--)
 		{
-			sum5 = sum5 + i;
+			if (j != 98)
+				printf("%d, ", j);
+			else if (j == 98)
+				printf("%d\n", j);
 		}
 	}
-	sum = sum3 + sum5;
-	printf("%lu\n", sum);
-	return (0);
 }
