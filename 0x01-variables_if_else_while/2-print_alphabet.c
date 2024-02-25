@@ -1,3 +1,5 @@
+#include<stdio.h>
+
 /**
  * main - Prints tthe alphabet in lowercase
  *
@@ -5,7 +7,6 @@
  *
  * Return: Always 0 (Success)
  */
-#include<stdio.h>
 
 int main(void)
 {
